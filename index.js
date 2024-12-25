@@ -6,17 +6,13 @@ const requestListener = async (req, res) => {
   let filePath;
   switch (req.url) {
     case "/":
-      filePath = "index.html";
+      filePath = "home.html";
       break;
     case "/about":
       filePath = "about.html";
       break;
-    case "/contact-me":
-      filePath = "contact-me.html";
-      break;
     default:
       filePath = "404.html";
-      res.writeHead(404); // Set 404 status for invalid routes
       break;
   }
 
